@@ -1,0 +1,22 @@
+{% extends 'bases/base.html' %}
+
+{% block title %}Cadastro Entrada{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+  <h3 class="display-6">Cadastrar Entrada</h3>
+
+  <div class="card">
+    <div class="card-body">
+      <form action="" method="POST" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+    </div>
+  </div>
+  <a href="{% url 'inflow_list' %}" class="btn btn-secondary mt-3">Cancelar e voltar</a>
+</div>
+
+{% endblock %}
